@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "electronics-computing": {
+      "command": "node",
+      "args": ["mcp/server.mjs"]
+    }
+  }
+}

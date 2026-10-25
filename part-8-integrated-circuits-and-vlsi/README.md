@@ -1,0 +1,28 @@
+# Part VIII — Integrated Circuits and VLSI
+
+Every circuit in this book so far has ended up, sooner or later, inside a chip: the op-amp of Part II, the gates and flip-flops of Part III, the processor and memories of Part IV, the microcontroller that runs the firmware of Part VI and the gate driver and controller of a power converter in Part VII. This part opens the chip. It starts from the complementary MOS inverter, the circuit of which billions of copies make up a modern processor, and shows how its switching threshold, noise margins, power and delay follow from the transistor models of Chapter 4. It then scales up to the design flow that turns a register-transfer description of millions of gates into a placed, routed, timed and verified layout ready for fabrication, and ends at the system level, where an engineer decides which parts of a computation belong in software on a processor and which in dedicated hardware. The thread is the same as in the rest of the book: an abstraction (a logic gate, a standard cell, a synthesised netlist, an accelerator) holds only inside limits of voltage, delay, power and area that the devices beneath it set, and good design is knowing where those limits are.
+
+## By the end of this part you should understand
+
+- Why complementary pull-up and pull-down networks give rail-to-rail outputs with no static current, and how the inverter's transfer characteristic sets its switching threshold and noise margins.
+- How dynamic power ($\alpha CV^2f$), short-circuit power and leakage arise, and how voltage scaling, clock gating, power gating and multi-threshold libraries trade them against speed.
+- How to estimate gate and wire delay with RC and Elmore models, and how to size a path of gates with logical effort.
+- How static CMOS gates, transmission gates, latches and master–slave flip-flops are built and sized at the transistor level, and where setup, hold and clock-to-Q times come from.
+- How a schematic becomes a layout through stick diagrams and design rules, and how layout prevents latch-up.
+- How a chip is designed hierarchically, from RTL through logic synthesis, placement, routing and clock-tree synthesis to static timing analysis, power estimation, design-rule checking and verification.
+- What fabrication imposes on design: process variation and corners, lithography-driven rules, yield and reliability.
+- How to partition a computation between processor, FPGA and custom hardware, model its performance and verify the result at system level.
+
+## Chapters
+
+| Chapter | Central question | What it delivers |
+|---|---|---|
+| [Chapter 33 — CMOS Fundamentals](33-cmos-fundamentals.md) | Why does a pair of complementary MOSFETs make an almost ideal logic gate, and what sets its noise margins, power and delay? | Inverter VTC and switching threshold, effective-resistance switch model, dynamic and static power, propagation delay and logical effort, noise margins, static CMOS and transmission-gate logic, latches and flip-flops at transistor level, stick diagrams, lambda rules and latch-up |
+| [Chapter 34 — VLSI Design](34-vlsi-design.md) | How is a design of millions of gates taken from an RTL description to a verified layout that meets timing, power and manufacturing constraints? | Design hierarchy, RTL coding for synthesis, logic synthesis, floorplanning, placement and routing, static timing analysis, power estimation, design-rule checking, functional and physical verification, fabrication constraints |
+| [Chapter 35 — Hardware–Software Co-Design](35-hardware-software-co-design.md) | Which parts of a computation belong in software and which in hardware, and how is the combined system modelled and verified? | Partitioning methods, processor versus FPGA trade-offs, hardware acceleration, memory and data movement, performance modelling, embedded AI deployment, real-time constraints and system-level verification |
+
+## How this part connects to the rest of the book
+
+Part VIII stands on the device models of Part I, especially the MOSFET of [Chapter 4](../part-1-electronic-devices/04-field-effect-transistors.md) and the parasitic thyristor of [Chapter 5](../part-1-electronic-devices/05-advanced-semiconductor-devices.md); on the logic, timing and sequential design of Part III ([Chapters 12–15](../part-3-digital-electronics/12-boolean-algebra-and-logic-gates.md)); on the architecture, memories and FPGAs of Part IV ([Chapters 16–18](../part-4-computer-architecture-and-digital-hardware/16-computer-architecture.md)) and the hardware description languages of [Chapter 19](../part-4-computer-architecture-and-digital-hardware/19-hardware-description-languages.md); and, for co-design, on the programming of Part V and the embedded and real-time systems of Part VI.
+
+Three sibling books supply what this part does not re-derive. *Engineering Physics* gives the physics of the MOS transistor and its scaling limits (Ch. 18 §18.3 and §18.9). *Materials Science and Engineering* owns the processes that make the chip, from crystal growth to lithography, etching, copper interconnects and process-induced defects ([Ch. 50](https://github.com/The-Studio-of-Sadiq/Materials-Science-and-Engineering/blob/main/Chapters/CHAPTER%2050.md)), and the semiconductor materials themselves (Ch. 32–35). *Circuits, Signals and Communications* provides the transmission-line and interconnect theory behind high-speed wires and clock distribution ([Ch. 14](https://github.com/The-Studio-of-Sadiq/Circuits-Signals-and-Communications/blob/main/part-3-advanced-network-theory/14-transmission-lines.md)), and *The Mathematics Universe* the optimisation behind placement and routing tools. Chapter 35 closes the book by bringing hardware and software back together into one design problem.

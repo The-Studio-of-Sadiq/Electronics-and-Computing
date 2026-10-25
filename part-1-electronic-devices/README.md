@@ -1,0 +1,29 @@
+# Part I — Electronic Devices
+
+Every circuit, processor and converter in this book is built from a handful of semiconductor devices, and every abstraction it relies on (the amplifier, the logic gate, the switch, the instruction) holds only while those devices stay inside their limits. Part I turns device physics into the working knowledge needed to use real parts: how a nonlinear device is modelled at the level of accuracy a design requires, how it is biased and linearised, how its parameters move with temperature and from part to part, and what its datasheet guarantees. It moves from ideas common to all devices, through the junction and the two transistor families, to the power, wide-bandgap and optoelectronic devices that carry the same principles to kilovolts, gigahertz and light.
+
+## By the end of this part you should understand
+
+- how a device is described by its voltage–current characteristics, and how to choose among ideal, piecewise-linear, exponential and compact models for a given purpose;
+- why operating regions exist, how to bias a device at a stable operating point, and when it may be replaced by a linear small-signal model;
+- how temperature, part-to-part spread, breakdown, safe operating area, parasitics and ageing limit every model, and how datasheet ratings and characteristics express those limits;
+- how real p–n and Schottky junctions depart from the ideal diode law, and how rectifier, Zener, Schottky, photo-, light-emitting, solar, varactor and protection diodes are chosen and sized;
+- how the bipolar transistor works in its four regions and three configurations, how it is biased against $\beta$ and temperature spread, and what limits its gain, switching speed and bandwidth;
+- how JFETs and MOSFETs are modelled, from the square law to short-channel and power devices;
+- how thyristors, IGBTs, wide-bandgap and optoelectronic devices extend these ideas, and how devices are selected against their ratings.
+
+## Chapters
+
+| Chapter | Central question | What it delivers |
+|---|---|---|
+| [Chapter 1 — Electronic Device Fundamentals](01-electronic-device-fundamentals.md) | How is a nonlinear device modelled, biased and linearised, and which limits end the validity of every model? | Characteristics, load lines and Newton solution, the model hierarchy, operating regions, bias sensitivity, small-signal linearisation and its distortion limit, temperature coefficients and self-heating, datasheet structure and derating, breakdown, SOA, noise, spread and reliability |
+| [Chapter 2 — Semiconductor Junction Devices](02-semiconductor-junction-devices.md) | How does a real junction depart from the ideal diode law, and how is it specialised for different tasks? | Depletion-region numbers, breakdown and stored charge, the real diode characteristic and reverse recovery, rectifier, Zener and Schottky diodes, photodiodes, LEDs and solar cells at device level, varactors, and TVS, ESD, flyback and reverse-polarity protection |
+| [Chapter 3 — Bipolar Junction Transistors](03-bipolar-junction-transistors.md) | How does the BJT amplify and switch, and how is a circuit made independent of its poorly controlled current gain? | Structure and Ebers–Moll model, regions and saturation voltage, the CB, CE and CC configurations, stable bias design, load lines, the hybrid-π model, intrinsic gain and degeneration, switching times and storage, $f_T$ and the Miller effect |
+| [Chapter 4 — Field-Effect Transistors](04-field-effect-transistors.md) | How does a gate voltage control a channel, and how do FET models, bias and switching differ from the BJT's? | JFET operation, MOSFET structure, enhancement and depletion modes, threshold voltage, regions and short-channel effects, biasing, small-signal models and amplification, switching, and power-MOSFET fundamentals |
+| [Chapter 5 — Advanced Semiconductor Devices](05-advanced-semiconductor-devices.md) | Which devices handle kilovolts, kiloamperes, light and microwave frequencies, and how are devices selected against their ratings? | Thyristors, SCRs, TRIACs and DIACs, IGBTs, SiC and GaN power devices, optoelectronic and compound-semiconductor devices, and device selection and ratings |
+
+## How this part connects to the rest of the book
+
+Part I builds on three sibling books and feeds every later part of this one. Band theory, carrier statistics, doping, drift–diffusion and the one-section sketches of the diode, BJT and MOSFET come from *Engineering Physics: Top Down* ([Ch. 6](https://github.com/The-Studio-of-Sadiq/Engineering-Physics/blob/main/CHAPTERS/CHAPTER%206.md), [Ch. 14](https://github.com/The-Studio-of-Sadiq/Engineering-Physics/blob/main/CHAPTERS/CHAPTER%2014.md) and [Ch. 18](https://github.com/The-Studio-of-Sadiq/Engineering-Physics/blob/main/CHAPTERS/CHAPTER%2018.md)); semiconductor material properties, families and optoelectronic materials from *Materials Science and Engineering* ([Ch. 32–35](https://github.com/The-Studio-of-Sadiq/Materials-Science-and-Engineering/blob/main/Chapters/CHAPTER%2032.md)); and circuit laws, dependent sources, two-ports and frequency response from *Circuits, Signals and Communications* ([Part I](https://github.com/The-Studio-of-Sadiq/Circuits-Signals-and-Communications/blob/main/part-1-circuit-fundamentals/README.md)).
+
+Within this book, the devices of Part I become the analog circuits of Part II: diode circuits (Chapter 6), transistor and operational amplifiers (Chapters 7–8), feedback and oscillators (Chapter 9) and analog integrated circuits (Chapter 10). The switching behaviour of transistors becomes the logic gates of Part III and, at the transistor level, the CMOS circuits and VLSI design of Part VIII (Chapters 33–34). The power and wide-bandgap devices of Chapters 4 and 5, with the thermal and safe-operating-area limits of Chapter 1, are the switches of the converters in Part VII (Chapters 29–32), whose system-level use belongs to *Electrical Energy and Machines*.

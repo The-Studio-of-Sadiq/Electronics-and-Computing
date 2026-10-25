@@ -1,0 +1,28 @@
+# Part II — Analog Electronics
+
+Part I described devices one at a time. This part connects them into circuits that do continuous-valued work: rectifying the mains into a DC rail, amplifying a microvolt sensor signal, filtering it, making it oscillate on purpose or keeping it from oscillating by accident, and holding a reference voltage steady. A nonlinear device, biased and wrapped in feedback, behaves like a linear building block (a gain of 100, a 1 kHz low-pass filter, a 2.500 V reference), but only within the limits of swing, bandwidth, slew rate, noise, offset, temperature and stability that the device sets. A strain-gauge amplifier that drifts with the seasons, a regulator that oscillates when a ceramic capacitor is fitted, a rectifier whose capacitor dies after two summers: each is an abstraction pushed past its limits, and each is predicted by the methods of this part.
+
+## By the end of this part you should understand
+
+- How diodes rectify, filter, clip, clamp and multiply, and how to design a transformer–rectifier–capacitor supply from its worst-case corners rather than from its nominal values.
+- How a single transistor stage amplifies, how its gain, input and output impedance follow from the small-signal model, and how stages are cascaded, biased and coupled.
+- What sets an amplifier's bandwidth and distortion, and how the Miller effect, the dominant pole and nonlinearity show up in measurements.
+- How far the ideal op-amp model can be trusted, and how to design the standard op-amp circuits, from instrumentation amplifiers to active filters, to a numerical specification.
+- What negative and positive feedback do to gain, bandwidth, impedance and distortion, how loop gain and phase margin decide stability, and how the Barkhausen criterion turns instability into RC, LC and crystal oscillators.
+- How integrated circuits build amplifiers, references and regulators from matched transistors, current mirrors and active loads, why they need frequency compensation, and how comparators, DACs and ADCs form the interface to digital logic.
+
+## Chapters
+
+| Chapter | Central question | What it delivers |
+|---|---|---|
+| [Chapter 6 — Diode Circuits](06-diode-circuits.md) | How much DC, ripple and component stress does a rectifier produce, and how do diodes reshape and protect signals? | Rectifier circuits and figures of merit, ripple, capacitor-input filters simulated for peak and RMS currents, clippers and input protection, clampers, voltage multipliers, a worst-case supply design |
+| [Chapter 7 — Transistor Amplifiers](07-transistor-amplifiers.md) | How are the gain and the input and output impedance of a transistor stage computed, and what sets its bandwidth and distortion? | Common-emitter, common-source and follower stages, small-signal analysis, multistage amplifiers, impedance levels, frequency response, distortion |
+| [Chapter 8 — Operational Amplifiers](08-operational-amplifiers.md) | How far can the ideal op-amp be trusted, and how are the standard op-amp circuits designed to a specification? | Ideal and practical op-amps, amplifier configurations, integrators, comparators, instrumentation amplifiers, precision rectifiers, active filters, oscillators, limitations and stability |
+| [Chapter 9 — Feedback and Oscillators](09-feedback-and-oscillators.md) | What does feedback do to an amplifier, when does it make the amplifier unstable, and how is that instability used to build oscillators? | Positive and negative feedback, the four feedback topologies, gain–bandwidth trade-off, stability margins, the Barkhausen criterion, RC, LC and crystal oscillators, waveform generators |
+| [Chapter 10 — Analog Integrated Circuits](10-analog-integrated-circuits.md) | How are amplifiers, references and regulators built from matched transistors on one die, and how do they meet the digital world? | Differential pairs, current mirrors, active loads, multistage IC amplifiers, frequency compensation, analog IC architecture, voltage references, regulators, comparators, mixed-signal interfaces |
+
+## How this part connects to the rest of the book
+
+Part II stands on Part I. The diode ratings and loss model of Chapter 2, the BJT and FET bias and small-signal models of Chapters 3 and 4, and the datasheet and thermal discipline of Chapter 1 are used here as known tools. Looking forward, the comparators and converters of Chapter 10 are the boundary with the digital electronics of Part III, and the ADC and DAC interfaces return in Chapter 26 as embedded peripherals. The rectifiers of Chapter 6 are developed into controlled and three-phase rectifiers for power conversion in Chapter 31, and the linear regulator of Chapter 10 meets its switch-mode competitor in Chapter 30.
+
+Three sibling books carry theory this part uses without re-deriving it. Circuit laws, network theorems, phasors, Laplace-domain analysis, Bode plots, Fourier series and feedback stability (Nyquist, root locus, margins) come from *[Circuits, Signals and Communications](https://github.com/The-Studio-of-Sadiq/Circuits-Signals-and-Communications)*, Chs. 2–13, 18 and 34–35. The one-section sketches of the diode, transistor, op-amp, filter and rectifier, and the thermal-resistance network behind every heatsink calculation, come from *[Engineering Physics: Top Down](https://github.com/The-Studio-of-Sadiq/Engineering-Physics)*, Ch. 18 and Ch. 14 §14.7. The power-quality consequences of rectifier input currents, and the limits that grid codes place on them, belong to *[Electrical Energy and Machines](https://github.com/The-Studio-of-Sadiq/Electrical-Energy-and-Machines)*, Ch. 25.

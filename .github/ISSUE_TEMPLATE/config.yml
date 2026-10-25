@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Read the book (PDF)
+    url: https://github.com/The-Studio-of-Sadiq/Electronics-and-Computing/blob/main/pdf/Electronics-and-Computing.pdf
+    about: The whole book as one PDF with bookmarks.
+  - name: Wiki
+    url: https://github.com/The-Studio-of-Sadiq/Electronics-and-Computing/wiki
+    about: Chapter guide, figures, PDF build, MCP server and FAQ.
+  - name: Contributing guide
+    url: https://github.com/The-Studio-of-Sadiq/Electronics-and-Computing/blob/main/CONTRIBUTING.md
+    about: How to report errors and propose fixes, figures and sections.

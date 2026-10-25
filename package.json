@@ -1,0 +1,48 @@
+{
+  "name": "electronics-computing-and-machines",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Electronics and Computing (Book 4): book sources, figures, PDF builder and MCP server",
+  "type": "module",
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "electronics-computing-mcp": "mcp/server.mjs"
+  },
+  "scripts": {
+    "check": "node scripts/check-book.mjs && node scripts/figure-plan.mjs --check && node scripts/mcp-smoke.mjs",
+    "pdf": "node scripts/build-pdf.mjs",
+    "figures": "python scripts/build-figures.py",
+    "figures:plan": "node scripts/figure-plan.mjs",
+    "mcp": "node mcp/server.mjs",
+    "social-preview": "python scripts/make-social-preview.py",
+    "wiki": "node scripts/make-wiki.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "katex": "^0.19.0",
+    "markdown-it": "^15.0.3",
+    "markdown-it-texmath": "^1.0.0",
+    "puppeteer-core": "^25.15.0",
+    "zod": "^4.6.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/The-Studio-of-Sadiq/Electronics-and-Computing.git"
+  },
+  "homepage": "https://github.com/The-Studio-of-Sadiq/Electronics-and-Computing/wiki",
+  "author": "Golam Kuadir Khan Prince",
+  "keywords": [
+    "electronics",
+    "analog-circuits",
+    "digital-logic",
+    "computer-architecture",
+    "embedded-systems",
+    "power-electronics",
+    "vlsi",
+    "textbook",
+    "mcp-server"
+  ]
+}

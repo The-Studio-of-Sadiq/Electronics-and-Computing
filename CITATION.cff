@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use or adapt this book, please cite it as below."
+type: dataset
+title: "Electronics and Computing (Book 4 — The Electronics & Computing Core)"
+abstract: >-
+  An open textbook on electronic devices, analog and digital hardware,
+  computer architecture, programming, embedded computation and
+  hardware-software interaction: diodes, transistors and power devices,
+  amplifiers, op-amps and analog ICs, digital logic and sequential design,
+  processors, memory, FPGAs and HDLs, C/C++ and Python for engineers,
+  algorithms and scientific computing, embedded and real-time systems,
+  power-electronic converters, CMOS and VLSI design, and hardware-software
+  co-design. 8 parts, 35 chapters and 197 computed figures, written in
+  Markdown and LaTeX, with a typeset PDF and an MCP server.
+authors:
+  - given-names: "Golam Kuadir Khan"
+    family-names: "Prince"
+repository-code: "https://github.com/The-Studio-of-Sadiq/Electronics-and-Computing"
+license: MIT
+version: "1.0.0"
+date-released: "2026-10-25"
+keywords:
+  - electronics
+  - semiconductor devices
+  - analog circuits
+  - digital logic
+  - computer architecture
+  - FPGA
+  - embedded systems
+  - real-time systems
+  - power electronics
+  - VLSI
+  - textbook
